@@ -4,7 +4,9 @@
   "private": true,
   "main": "electron/dist/main.js",
   "scripts": {
+    "install:all": "npm install && cd frontend && npm install",
     "dev:frontend": "npm run dev --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend",
     "build:electron": "tsc -p electron",
     "dev:electron": "electron .",
     "start": "concurrently \"npm run dev:frontend\" \"tsc -p electron --watch\" \"wait-on http://localhost:5173 && electron .\""
