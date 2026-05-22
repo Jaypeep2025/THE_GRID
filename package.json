@@ -1,0 +1,17 @@
+{
+  "name": "grid-3d-kiosk",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:electron": "tsc -p electron && electron electron/dist/main.js",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:electron\"",
+    "build:frontend": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^30.0.0",
+    "typescript": "^5.4.5"
+  }
+}
